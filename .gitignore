@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.spec
+build/
+dist/
+*.log
+*.txt
+*.pdf
+*.xlsx
+*.xls
+*.xml
+*.accdb
+inspect_*.py
+temp_*.py
+debug_*.py
+dump_*.py
+list_*.py
