@@ -3,23 +3,79 @@
 AUTOMACAO QORE API V1 - BASEADA EM HTTP REQUESTS
 ================================================================================
 
-Substitui Selenium por chamadas HTTP diretas (requests).
-Muito mais rapido e eficiente que a versao com browser.
+Modulo principal de automacao para download de arquivos do portal QORE
+(hub.qoredtvm.com.br) utilizando chamadas HTTP diretas em substituicao
+ao Selenium.
 
-Vantagens:
-- ~10x mais rapido (30s vs 5min para 34 fundos)
-- Baixo consumo de memoria (~50MB vs ~500MB/Chrome)
-- Downloads paralelos com ThreadPoolExecutor
-- Sem dependencia de Chrome/Driver
-- Mais robusto (sem fragilidade de DOM)
+Descricao
+---------
+Este modulo implementa um cliente API completo para o portal QORE, permitindo
+download automatizado de relatorios financeiros (PDF, Excel e XML) de fundos
+de investimento. Utiliza autenticacao JWT e downloads paralelos para maxima
+eficiencia.
 
-Endpoints utilizados:
-- POST /api/v1/authorize -> JWT Bearer token
-- GET /api/v1/fundos-posicao/{uuid}/arquivos?tipo=X&p=0 -> Lista arquivos
-- Download direto via URL do arquivo
+Arquitetura
+-----------
+O modulo segue uma arquitetura em camadas:
+
+    ┌─────────────────────────────────────────────────────────────┐
+    │                    QoreAutomationAPI                        │
+    │              (Orquestracao e configuracao)                  │
+    └─────────────────────────────────────────────────────────────┘
+                              │
+         ┌────────────────────┼────────────────────┐
+         │                    │                    │
+         v                    v                    v
+    ┌──────────┐      ┌──────────────┐     ┌─────────────┐
+    │QoreAPI   │      │QoreDownload  │     │FileHandler  │
+    │Client    │      │Manager       │     │             │
+    └──────────┘      └──────────────┘     └─────────────┘
+
+Vantagens vs Selenium
+---------------------
+| Metrica        | Selenium    | API HTTP   | Melhoria |
+|----------------|-------------|------------|----------|
+| Tempo (34 f.)  | 5-10 min    | 30s-1min   | ~10x     |
+| Memoria        | ~500MB      | ~50MB      | ~10x     |
+| Dependencias   | Chrome+Drv  | requests   | Simples  |
+| Estabilidade   | Fragil(DOM) | Robusto    | Alta     |
+
+API Endpoints
+-------------
+1. POST /api/v1/authorize
+   - Autenticacao (retorna JWT token)
+   - Body: {"username": "...", "password": "..."}
+
+2. GET /api/v1/fundos-posicao/{uuid}/arquivos?tipo={TIPO}&p={PAGE}
+   - Lista arquivos disponiveis
+   - Tipos: CARTEIRA_PDF, CARTEIRA_EXCEL, XML_5_0, XML_4_01
+
+3. GET /api/v1/fundos-posicao/{uuid}/arquivos/{guid}/download
+   - Download do arquivo
+
+Classes Principais
+------------------
+- QoreAPIClient: Cliente HTTP com autenticacao JWT
+- QoreDownloadManager: Downloads paralelos com ThreadPoolExecutor
+- QoreAutomationAPI: Classe principal de orquestracao
+- FundoManager: Gerenciamento de lista de fundos
+- FileHandler: Processamento e movimentacao de arquivos
+
+Uso Basico
+----------
+>>> from automacao_qore_api import QoreAutomationAPI, carregar_config_planilha
+>>> paths, creds, flags, datas = carregar_config_planilha('DOWNLOADS_AUX.xlsx')
+>>> bot = QoreAutomationAPI(paths, creds, flags, datas)
+>>> bot.executar()
+
+Uso via CLI
+-----------
+$ python core/automacao_qore_api.py
+$ python core/automacao_qore_api.py "C:\\config\\DOWNLOADS_AUX.xlsx"
 
 Autor: ETL Team
 Data: Dezembro 2025
+Versao: 1.0
 ================================================================================
 """
 

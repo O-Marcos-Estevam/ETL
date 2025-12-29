@@ -43,7 +43,9 @@
       "Bash(pkill:*)",
       "Bash(pip uninstall:*)",
       "Bash(timeout 60 python:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: Add API-based QORE automation with XML support\n\nMajor changes:\n- Add automacao_qore_api.py: HTTP-based automation replacing Selenium\n  - 10x faster than browser-based approach\n  - Parallel downloads with ThreadPoolExecutor \\(10 workers\\)\n  - Supports PDF, Excel, and XML \\(Anbima 5.0\\) downloads\n  \n- Add debug tools for API discovery:\n  - captura_xml_endpoint.py: CDP-based network capture\n  - test_api_qore.py: API endpoint testing\n  \n- Discovered API endpoints:\n  - POST /api/v1/authorize \\(JWT auth\\)\n  - GET /api/v1/fundos-posicao/{uuid}/arquivos?tipo=X\n  - Types: CARTEIRA_PDF, CARTEIRA_EXCEL, XML_5_0, XML_4_01\n\n- Add supporting apps:\n  - dash_db_viewer: Dashboard for database visualization\n  - db_viewer_3d: 3D schema explorer\n  - etl_desktop: Desktop ETL interface\n\n- Add documentation and debug utilities\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)"
     ]
   }
 }
