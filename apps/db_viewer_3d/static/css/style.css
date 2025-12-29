@@ -1,0 +1,944 @@
+/* ============================================================================
+   DATABASE 3D VIEWER - FINANCIAL MARKET THEME
+   Clean, Professional, Bloomberg-inspired
+   ============================================================================ */
+
+:root {
+    /* Background */
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-tertiary: #21262d;
+    --bg-panel: rgba(22, 27, 34, 0.95);
+
+    /* Accent Colors */
+    --accent-blue: #58a6ff;
+    --accent-green: #3fb950;
+    --accent-red: #f85149;
+    --accent-yellow: #d29922;
+    --accent-purple: #a371f7;
+
+    /* Text */
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --text-muted: #6e7681;
+
+    /* Borders */
+    --border-default: #30363d;
+    --border-muted: #21262d;
+
+    /* Positive/Negative */
+    --positive: #3fb950;
+    --negative: #f85149;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ============================================================================
+   LOADING SCREEN
+   ============================================================================ */
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.4s ease;
+}
+
+#loading-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader {
+    text-align: center;
+}
+
+.loader-ring {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--border-default);
+    border-top: 3px solid var(--accent-blue);
+    border-radius: 50%;
+    margin: 0 auto 24px;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loader-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.loader-status {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* ============================================================================
+   HEADER
+   ============================================================================ */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-default);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 20px;
+    color: var(--accent-blue);
+}
+
+.logo-text {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.logo-text .accent {
+    color: var(--accent-blue);
+}
+
+/* Navigation */
+#nav {
+    display: flex;
+    gap: 4px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+}
+
+.nav-btn:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.nav-btn.active {
+    background: var(--accent-blue);
+    color: #ffffff;
+}
+
+.nav-icon {
+    margin-right: 6px;
+    opacity: 0.7;
+}
+
+/* Header Stats */
+.header-stats {
+    display: flex;
+    gap: 32px;
+}
+
+.stat {
+    text-align: right;
+}
+
+.stat-value {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
+}
+
+.stat-value.positive { color: var(--positive); }
+.stat-value.negative { color: var(--negative); }
+
+.stat-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================================================
+   3D CANVAS
+   ============================================================================ */
+
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#canvas-container canvas {
+    display: block;
+}
+
+/* ============================================================================
+   PANELS
+   ============================================================================ */
+
+.glass-panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-default);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.panel {
+    position: fixed;
+    z-index: 200;
+    min-width: 280px;
+    max-width: 400px;
+    transition: all 0.2s ease;
+}
+
+.panel.hidden {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+}
+
+#info-panel {
+    top: 80px;
+    right: 24px;
+    max-height: calc(100vh - 160px);
+    overflow-y: auto;
+}
+
+#fund-selector {
+    top: 80px;
+    left: 24px;
+    min-width: 260px;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-default);
+    background: var(--bg-tertiary);
+    border-radius: 8px 8px 0 0;
+}
+
+.panel-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.3px;
+}
+
+.panel-close {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    line-height: 1;
+}
+
+.panel-close:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.panel-content {
+    padding: 16px;
+}
+
+/* ============================================================================
+   CONTROLS
+   ============================================================================ */
+
+#controls {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+    background: var(--bg-panel);
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--border-default);
+}
+
+.control-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background: transparent;
+    border: 1px solid var(--border-default);
+    color: var(--text-secondary);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.control-btn:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-color: var(--border-default);
+}
+
+.control-btn.active {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: #ffffff;
+}
+
+/* ============================================================================
+   FORM ELEMENTS
+   ============================================================================ */
+
+select, input {
+    width: 100%;
+    padding: 10px 12px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-default);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+select:focus, input:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+}
+
+select option {
+    background: var(--bg-secondary);
+    padding: 8px;
+}
+
+/* ============================================================================
+   DATA DISPLAY
+   ============================================================================ */
+
+.data-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-muted);
+}
+
+.data-row:last-child {
+    border-bottom: none;
+}
+
+.data-label {
+    color: var(--text-secondary);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.data-value {
+    font-size: 14px;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+}
+
+.data-value.cyan { color: var(--accent-blue); }
+.data-value.magenta { color: var(--accent-purple); }
+.data-value.green { color: var(--positive); }
+.data-value.yellow { color: var(--accent-yellow); }
+
+.schema-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.schema-badge.cad { background: rgba(88, 166, 255, 0.15); color: var(--accent-blue); }
+.schema-badge.pos { background: rgba(63, 185, 80, 0.15); color: var(--positive); }
+.schema-badge.aux { background: rgba(163, 113, 247, 0.15); color: var(--accent-purple); }
+.schema-badge.stage { background: rgba(210, 153, 34, 0.15); color: var(--accent-yellow); }
+
+/* Columns list */
+.columns-list {
+    max-height: 280px;
+    overflow-y: auto;
+    margin-top: 12px;
+}
+
+.column-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-muted);
+    font-size: 13px;
+}
+
+.column-item:last-child {
+    border-bottom: none;
+}
+
+.column-name {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.column-type {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: 'SF Mono', 'Consolas', monospace;
+}
+
+/* ============================================================================
+   SCROLLBAR
+   ============================================================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-default);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* ============================================================================
+   CSS2D LABELS (Three.js)
+   ============================================================================ */
+
+.label-3d {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-primary);
+    background: var(--bg-panel);
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-default);
+    pointer-events: none;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.label-3d.schema {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.label-3d.table {
+    font-size: 10px;
+    opacity: 0.9;
+}
+
+.label-3d.fund-label {
+    font-size: 9px;
+    padding: 2px 4px;
+    transform-origin: center;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ============================================================================
+   TICKER STYLE VALUES
+   ============================================================================ */
+
+.ticker-value {
+    font-variant-numeric: tabular-nums;
+    font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
+}
+
+.ticker-up {
+    color: var(--positive);
+}
+
+.ticker-up::before {
+    content: '▲ ';
+    font-size: 10px;
+}
+
+.ticker-down {
+    color: var(--negative);
+}
+
+.ticker-down::before {
+    content: '▼ ';
+    font-size: 10px;
+}
+
+/* ============================================================================
+   MINI CHART PLACEHOLDER
+   ============================================================================ */
+
+.mini-chart {
+    height: 40px;
+    background: linear-gradient(to right,
+        rgba(63, 185, 80, 0.1) 0%,
+        rgba(63, 185, 80, 0.2) 50%,
+        rgba(63, 185, 80, 0.1) 100%);
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+/* ============================================================================
+   PERIOD FILTER BUTTONS
+   ============================================================================ */
+
+.filter-label {
+    display: block;
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.period-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.period-btn {
+    flex: 1;
+    padding: 6px 8px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-default);
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.period-btn:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.period-btn.active {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: #ffffff;
+}
+
+/* ============================================================================
+   TABLE SEARCH PANEL
+   ============================================================================ */
+
+#table-search {
+    top: 80px;
+    left: 24px;
+    min-width: 300px;
+}
+
+.search-results {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 12px;
+}
+
+.search-result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    margin: 4px 0;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-muted);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.search-result-item:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--accent-blue);
+}
+
+.search-result-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.search-result-schema {
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+/* ============================================================================
+   TOOLTIP
+   ============================================================================ */
+
+.tooltip {
+    position: fixed;
+    z-index: 1000;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-default);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    max-width: 280px;
+    transition: opacity 0.15s ease;
+}
+
+.tooltip.hidden {
+    opacity: 0;
+}
+
+.tooltip-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.tooltip-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 3px 0;
+}
+
+.tooltip-label {
+    color: var(--text-muted);
+}
+
+.tooltip-value {
+    color: var(--accent-blue);
+    font-weight: 500;
+}
+
+.tooltip-divider {
+    height: 1px;
+    background: var(--border-muted);
+    margin: 8px 0;
+}
+
+.tooltip-subtitle {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.tooltip-asset {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 2px 0;
+    font-size: 11px;
+}
+
+.asset-name {
+    color: var(--text-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.asset-value {
+    color: var(--accent-green);
+    font-family: 'SF Mono', 'Consolas', monospace;
+    font-size: 10px;
+}
+
+.tooltip-more {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* ============================================================================
+   LOADING OVERLAY
+   ============================================================================ */
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(13, 17, 23, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+    transition: opacity 0.2s ease;
+}
+
+.loading-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mini-loader {
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--border-default);
+    border-top: 3px solid var(--accent-blue);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+/* ============================================================================
+   DATA PREVIEW TABLE
+   ============================================================================ */
+
+.preview-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.preview-table th,
+.preview-table td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-muted);
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.preview-table th {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+}
+
+.preview-table td {
+    color: var(--text-primary);
+    font-family: 'SF Mono', 'Consolas', monospace;
+}
+
+.preview-table tr:hover td {
+    background: var(--bg-tertiary);
+}
+
+.preview-container {
+    max-height: 250px;
+    overflow: auto;
+    margin-top: 12px;
+    border: 1px solid var(--border-muted);
+    border-radius: 6px;
+}
+
+/* ============================================================================
+   ACTION BUTTONS
+   ============================================================================ */
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.action-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 16px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-default);
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.action-btn:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+}
+
+.action-btn.primary {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: #ffffff;
+}
+
+.action-btn.primary:hover {
+    background: #4c9aef;
+}
+
+/* Refresh button animation */
+.control-btn.refreshing span {
+    animation: spin 0.8s linear infinite;
+}
+
+/* ============================================================================
+   ASSET DETAILS IN INFO PANEL
+   ============================================================================ */
+
+.section-divider {
+    height: 1px;
+    background: var(--border-default);
+    margin: 16px 0;
+}
+
+.section-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.asset-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.asset-item {
+    padding: 10px 12px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-muted);
+    border-radius: 6px;
+    margin-bottom: 8px;
+    transition: all 0.2s ease;
+}
+
+.asset-item:hover {
+    border-color: var(--accent-blue);
+    background: var(--bg-tertiary);
+}
+
+.asset-item:last-child {
+    margin-bottom: 0;
+}
+
+.asset-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.asset-num {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    min-width: 20px;
+}
+
+.asset-name {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+.asset-details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 28px;
+    font-size: 12px;
+}
+
+.asset-type {
+    color: var(--accent-purple);
+    background: rgba(163, 113, 247, 0.1);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.asset-value {
+    color: var(--accent-green);
+    font-family: 'SF Mono', 'Consolas', monospace;
+    font-weight: 500;
+}
+
+.asset-pct {
+    color: var(--text-muted);
+    font-size: 11px;
+}

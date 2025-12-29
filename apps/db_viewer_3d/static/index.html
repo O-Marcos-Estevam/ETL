@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database 3D Viewer | Financial Market</title>
+    <link rel="stylesheet" href="/css/style.css?v=9">
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/renderers/CSS2DRenderer.js"></script>
+
+    <!-- Tween.js for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">Q75ZQFKCT6PW-1630998327-448501</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">a8324a7c-ff2a-4204-a444-6a8842a864d9</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://blokoinvestimentos.sharepoint.com/sites/DomoGestora2/_layouts/15/DocIdRedir.aspx?ID=Q75ZQFKCT6PW-1630998327-448501, Q75ZQFKCT6PW-1630998327-448501</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">LOADING DATA</div>
+            <div class="loader-status" id="loading-status">Connecting to database...</div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div id="app">
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <span class="logo-icon">◇</span>
+                <span class="logo-text">DATABASE<span class="accent">3D</span></span>
+            </div>
+            <nav id="nav">
+                <button class="nav-btn active" data-view="overview">
+                    <span class="nav-icon">◉</span> OVERVIEW
+                </button>
+                <button class="nav-btn" data-view="schemas">
+                    <span class="nav-icon">⬡</span> SCHEMAS
+                </button>
+                <button class="nav-btn" data-view="financial">
+                    <span class="nav-icon">◈</span> FINANCIAL
+                </button>
+                <button class="nav-btn" data-view="portfolio">
+                    <span class="nav-icon">◧</span> PORTFOLIO
+                </button>
+                <button class="nav-btn" data-view="comparison">
+                    <span class="nav-icon">◫</span> COMPARISON
+                </button>
+            </nav>
+            <div class="header-stats" id="header-stats">
+                <div class="stat">
+                    <span class="stat-value" id="stat-funds">--</span>
+                    <span class="stat-label">FUNDS</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="stat-tables">--</span>
+                    <span class="stat-label">TABLES</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="stat-pl">--</span>
+                    <span class="stat-label">TOTAL PL</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 3D Canvas Container -->
+        <div id="canvas-container"></div>
+
+        <!-- Info Panel -->
+        <div id="info-panel" class="panel glass-panel hidden">
+            <div class="panel-header">
+                <span class="panel-title" id="panel-title">INFORMATION</span>
+                <button class="panel-close" id="panel-close">×</button>
+            </div>
+            <div class="panel-content" id="panel-content">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+
+        <!-- Bottom Controls -->
+        <div id="controls">
+            <button class="control-btn" id="btn-reset-camera" title="Reset Camera">
+                <span>⟲</span>
+            </button>
+            <button class="control-btn" id="btn-toggle-particles" title="Toggle Particles">
+                <span>✦</span>
+            </button>
+            <button class="control-btn" id="btn-toggle-labels" title="Toggle Labels">
+                <span>Aa</span>
+            </button>
+            <button class="control-btn" id="btn-refresh" title="Refresh Data">
+                <span>↻</span>
+            </button>
+        </div>
+
+        <!-- Fund Selector (for Financial view) -->
+        <div id="fund-selector" class="panel glass-panel hidden">
+            <div class="panel-header">
+                <span class="panel-title">SELECT FUND</span>
+            </div>
+            <div class="panel-content">
+                <select id="fund-dropdown">
+                    <option value="">Loading funds...</option>
+                </select>
+                <div class="period-filter" style="margin-top: 12px;">
+                    <label class="filter-label">PERIOD</label>
+                    <div class="period-buttons">
+                        <button class="period-btn" data-period="30">30D</button>
+                        <button class="period-btn" data-period="90">90D</button>
+                        <button class="period-btn" data-period="180">6M</button>
+                        <button class="period-btn active" data-period="365">1Y</button>
+                        <button class="period-btn" data-period="all">ALL</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Search (for Schemas view) -->
+        <div id="table-search" class="panel glass-panel hidden">
+            <div class="panel-header">
+                <span class="panel-title">SEARCH TABLES</span>
+            </div>
+            <div class="panel-content">
+                <input type="text" id="search-input" placeholder="Type to search tables...">
+                <div id="search-results" class="search-results"></div>
+            </div>
+        </div>
+
+        <!-- Tooltip -->
+        <div id="tooltip" class="tooltip hidden"></div>
+
+        <!-- Loading Overlay -->
+        <div id="loading-overlay" class="loading-overlay hidden">
+            <div class="mini-loader"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/api.js?v=9"></script>
+    <script src="/js/effects.js?v=9"></script>
+    <script src="/js/panels.js?v=9"></script>
+    <script src="/js/schema.js?v=9"></script>
+    <script src="/js/charts.js?v=9"></script>
+    <script src="/js/main.js?v=9"></script>
+</body>
+</html>

@@ -674,7 +674,8 @@ class Xml5Parser(ReportParser):
 
 # --- MAIN ---
 if __name__ == "__main__":
-    caminho_da_pasta = r'C:\bloko\Fundos - Documentos\00. Monitoramento\01. Rotinas\03. Arquivos Rotina\12. QORE_EXCEL'
+    #caminho_da_pasta = r'C:\bloko\Fundos - Documentos\00. Monitoramento\01. Rotinas\03. Arquivos Rotina\12. QORE_EXCEL'
+    caminho_da_pasta = r'C:\bloko\Fundos - Documentos\00. Monitoramento\01. Rotinas\03. Arquivos Rotina\XML_QORE'
     # Adicionando o caminho "Novo" para teste se necessário, ou assumindo que usuário moveu inputs
     # Para compatibilidade, mantemos o caminho original como default, mas aceitamos argumento
     

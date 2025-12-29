@@ -1,0 +1,183 @@
+/* PostgreSQL Database Viewer - Custom Styles */
+
+/* Container principal */
+.app-container {
+    min-height: 100vh;
+    padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #1a1a2e;
+    min-height: calc(100vh - 80px);
+    padding: 20px 15px;
+    border-right: 1px solid #333;
+}
+
+.sidebar-title {
+    color: #3498db;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.sidebar-col {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Schema tree */
+.schema-tree .accordion-item {
+    background-color: transparent;
+    border: none;
+}
+
+.schema-tree .accordion-button {
+    background-color: #2d2d44;
+    color: white;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+}
+
+.schema-tree .accordion-button:not(.collapsed) {
+    background-color: #3498db;
+}
+
+.schema-tree .accordion-body {
+    padding: 0;
+    background-color: transparent;
+}
+
+.schema-tree .list-group-item {
+    background-color: #1a1a2e;
+    border: none;
+    color: #ccc;
+    padding: 6px 15px 6px 30px;
+    font-size: 0.85rem;
+}
+
+.schema-tree .list-group-item:hover {
+    background-color: #2d2d44;
+    color: white;
+}
+
+/* Main content */
+.main-content {
+    padding: 20px 30px;
+    background-color: #0f0f1a;
+    min-height: calc(100vh - 80px);
+}
+
+/* Cards de estatisticas */
+.stat-card {
+    background-color: #1a1a2e;
+    border: 1px solid #333;
+}
+
+.stat-card .card-body {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Legenda ER */
+.er-legend {
+    padding: 10px;
+    background-color: #1a1a2e;
+    border-radius: 5px;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* SQL code preview */
+.sql-code {
+    background-color: #1a1a2e;
+    color: #2ecc71;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+/* DataTables */
+.dash-table-container {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Cards gerais */
+.card {
+    background-color: #1a1a2e;
+    border: 1px solid #333;
+}
+
+.card-header {
+    background-color: #2d2d44;
+    border-bottom: 1px solid #333;
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+    color: #aaa;
+    border: none;
+    background-color: transparent;
+}
+
+.nav-tabs .nav-link.active {
+    color: white;
+    background-color: #3498db;
+    border: none;
+}
+
+/* Alerts */
+.alert {
+    border: none;
+}
+
+/* Dropdown */
+.Select-control {
+    background-color: #2d2d44 !important;
+}
+
+.VirtualizedSelectOption {
+    background-color: #1a1a2e;
+}
+
+/* Date picker */
+.DateInput_input {
+    background-color: #2d2d44;
+    color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+}
+
+/* Cytoscape container */
+#er-cytoscape {
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #0f0f1a;
+}

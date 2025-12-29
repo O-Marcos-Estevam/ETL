@@ -1,0 +1,8 @@
+# Dashboard PostgreSQL - Dependencias
+dash>=2.14.0
+dash-bootstrap-components>=1.5.0
+dash-cytoscape>=0.3.0
+plotly>=5.18.0
+psycopg2-binary>=2.9.9
+pandas>=2.1.0
+python-dotenv>=1.0.0

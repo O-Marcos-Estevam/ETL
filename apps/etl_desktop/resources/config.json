@@ -1,0 +1,36 @@
+{
+    "app": {
+        "name": "ETL Pipeline Manager",
+        "version": "1.0.0",
+        "theme": "dark"
+    },
+    "paths": {
+        "database": "C:\\bloko\\Fundos - Documentos\\00. Monitoramento\\01. Rotinas\\03. Arquivos Rotina\\09. Base_de_Dados\\Base Fundos_v2.accdb",
+        "xml_folder": "C:\\bloko\\Fundos - Documentos\\00. Monitoramento\\01. Rotinas\\03. Arquivos Rotina\\XML_QORE",
+        "pdf_folder": "C:\\bloko\\Fundos - Documentos\\00. Monitoramento\\01. Rotinas\\03. Arquivos Rotina\\01. QORE\\PDF_QORE",
+        "excel_folder": "C:\\bloko\\Fundos - Documentos\\00. Monitoramento\\01. Rotinas\\03. Arquivos Rotina\\01. QORE\\EXCEL_QORE",
+        "downloads_aux": "C:\\bloko\\Fundos - Documentos\\00. Monitoramento\\01. Rotinas\\03. Arquivos Rotina\\07. DEPARA\\DOWNLOADS_AUX.xlsx",
+        "bd_aux": "C:\\bloko\\Fundos - Documentos\\00. Monitoramento\\01. Rotinas\\03. Arquivos Rotina\\06. BD\\BD.xlsx",
+        "temp_downloads": "C:\\bloko\\Fundos - Documentos\\00. Monitoramento\\01. Rotinas\\03. Arquivos Rotina\\00. Temp\\SELENIUM_DOWNLOADS"
+    },
+    "systems": {
+        "amplis": {"enabled": false, "name": "Amplis"},
+        "maps": {"enabled": false, "name": "MAPS"},
+        "fidc_estoque": {"enabled": false, "name": "FIDC Estoque"},
+        "jcot": {"enabled": false, "name": "JCOT"},
+        "britech": {"enabled": false, "name": "Britech"},
+        "qore_pdf": {"enabled": false, "name": "QORE PDF"},
+        "qore_excel": {"enabled": false, "name": "QORE Excel"},
+        "qore_xml": {"enabled": true, "name": "QORE XML"},
+        "xml_upload": {"enabled": true, "name": "XML Upload"}
+    },
+    "credentials": {
+        "qore": {"email": "", "password": "", "url": ""},
+        "maps": {"username": "", "password": "", "url": ""},
+        "amplis_reag": {"username": "", "password": "", "url": ""},
+        "amplis_master": {"username": "", "password": "", "url": ""},
+        "fidc": {"username": "", "password": "", "url": ""},
+        "jcot": {"username": "", "password": "", "url": ""},
+        "britech": {"username": "", "password": "", "url": ""}
+    }
+}

@@ -1,0 +1,1119 @@
+[
+  {
+    "type": "request",
+    "requestId": "1B905FF6639ED9B9D0ECD7F9C4B31804",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/dashboard",
+    "headers": {
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9754.433108
+  },
+  {
+    "type": "request",
+    "requestId": "71904.76",
+    "method": "POST",
+    "url": "https://hub.qoredtvm.com.br/api/v1/authorize",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+      "Referer": "https://hub.qoredtvm.com.br/auth/login",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": "{\"username\":\"camila.renda@nscapital.com.br\",\"password\":\"QORE1234\"}",
+    "timestamp": 9760.491864
+  },
+  {
+    "type": "response",
+    "requestId": "71904.76",
+    "url": "https://hub.qoredtvm.com.br/api/v1/authorize",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "access-control-allow-origin": "*",
+      "access-control-expose-headers": "x-suggested-filename",
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:40:49 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9760.744746
+  },
+  {
+    "type": "request",
+    "requestId": "71904.77",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/users/me",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/auth/login",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9760.746467
+  },
+  {
+    "type": "response",
+    "requestId": "71904.77",
+    "url": "https://hub.qoredtvm.com.br/api/v1/users/me",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:40:49 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9760.882751
+  },
+  {
+    "type": "request",
+    "requestId": "71904.78",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/notifications",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/dashboard",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9760.924794
+  },
+  {
+    "type": "request",
+    "requestId": "71904.79",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/gestor/dashboard",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/dashboard",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9760.931007
+  },
+  {
+    "type": "request",
+    "requestId": "71904.80",
+    "method": "GET",
+    "url": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%239899ac'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e",
+    "headers": {
+      "Referer": "",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+    },
+    "postData": null,
+    "timestamp": 9760.937316
+  },
+  {
+    "type": "response",
+    "requestId": "71904.78",
+    "url": "https://hub.qoredtvm.com.br/api/v1/notifications",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:40:49 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9761.082382
+  },
+  {
+    "type": "response",
+    "requestId": "71904.79",
+    "url": "https://hub.qoredtvm.com.br/api/v1/gestor/dashboard",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:40:49 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9761.102451
+  },
+  {
+    "type": "request",
+    "requestId": "81BDBAFFED834423B48C13C0B9559899",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7",
+    "headers": {
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9764.535083
+  },
+  {
+    "type": "response",
+    "requestId": "81BDBAFFED834423B48C13C0B9559899",
+    "url": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7",
+    "status": 200,
+    "mimeType": "text/html",
+    "headers": {
+      "accept-ranges": "bytes",
+      "content-length": "17888",
+      "content-type": "text/html",
+      "date": "Mon, 29 Dec 2025 20:40:53 GMT",
+      "etag": "\"694a9c95-45e0\"",
+      "last-modified": "Tue, 23 Dec 2025 13:43:49 GMT",
+      "server": "nginx/1.28.0"
+    },
+    "timestamp": 9764.658518
+  },
+  {
+    "type": "request",
+    "requestId": "71904.156",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/users/me",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9764.967941
+  },
+  {
+    "type": "request",
+    "requestId": "71904.160",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/notifications",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9764.984758
+  },
+  {
+    "type": "request",
+    "requestId": "71904.161",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9764.986656
+  },
+  {
+    "type": "request",
+    "requestId": "71904.162",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7/cotas?p=0&limit=5",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9764.990411
+  },
+  {
+    "type": "request",
+    "requestId": "71904.163",
+    "method": "GET",
+    "url": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%239899ac'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e",
+    "headers": {
+      "Referer": "",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+    },
+    "postData": null,
+    "timestamp": 9764.996629
+  },
+  {
+    "type": "response",
+    "requestId": "71904.156",
+    "url": "https://hub.qoredtvm.com.br/api/v1/users/me",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:40:53 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9765.109424
+  },
+  {
+    "type": "response",
+    "requestId": "71904.160",
+    "url": "https://hub.qoredtvm.com.br/api/v1/notifications",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:40:53 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9765.114758
+  },
+  {
+    "type": "response",
+    "requestId": "71904.161",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:40:53 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9765.119413
+  },
+  {
+    "type": "response",
+    "requestId": "71904.162",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7/cotas?p=0&limit=5",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:40:53 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9765.134547
+  },
+  {
+    "type": "request",
+    "requestId": "71904.164",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7/arquivos/carteira-pdf",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9766.600117
+  },
+  {
+    "type": "request",
+    "requestId": "71904.165",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7/arquivos?tipo=CARTEIRA_PDF&p=0",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7/arquivos/carteira-pdf",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9766.601014
+  },
+  {
+    "type": "request",
+    "requestId": "71904.166",
+    "method": "GET",
+    "url": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%235E6278'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e",
+    "headers": {
+      "Referer": "",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+    },
+    "postData": null,
+    "timestamp": 9766.603827
+  },
+  {
+    "type": "request",
+    "requestId": "71904.167",
+    "method": "GET",
+    "url": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%235E6278'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e",
+    "headers": {
+      "Referer": "",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+    },
+    "postData": null,
+    "timestamp": 9766.60516
+  },
+  {
+    "type": "response",
+    "requestId": "71904.165",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7/arquivos?tipo=CARTEIRA_PDF&p=0",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:40:55 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9766.733919
+  },
+  {
+    "type": "response",
+    "requestId": "71904.164",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/175a9636-5ff2-4b86-85b5-5e12726f9ac7",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:40:55 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9766.756274
+  },
+  {
+    "type": "request",
+    "requestId": "71904.168",
+    "method": "GET",
+    "url": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e",
+    "headers": {
+      "Referer": "",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+    },
+    "postData": null,
+    "timestamp": 9784.37191
+  },
+  {
+    "type": "request",
+    "requestId": "71904.169",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "headers": {
+      "Referer": "",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+    },
+    "postData": null,
+    "timestamp": 9784.37391
+  },
+  {
+    "type": "request",
+    "requestId": "2079E15C0FE442C4E846A23825526D63",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d",
+    "headers": {
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9785.720357
+  },
+  {
+    "type": "response",
+    "requestId": "2079E15C0FE442C4E846A23825526D63",
+    "url": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d",
+    "status": 200,
+    "mimeType": "text/html",
+    "headers": {
+      "accept-ranges": "bytes",
+      "content-length": "17888",
+      "content-type": "text/html",
+      "date": "Mon, 29 Dec 2025 20:41:14 GMT",
+      "etag": "\"694a9c95-45e0\"",
+      "last-modified": "Tue, 23 Dec 2025 13:43:49 GMT",
+      "server": "nginx/1.28.0"
+    },
+    "timestamp": 9785.85569
+  },
+  {
+    "type": "request",
+    "requestId": "71904.242",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/users/me",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9786.0313
+  },
+  {
+    "type": "request",
+    "requestId": "71904.246",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/notifications",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9786.051346
+  },
+  {
+    "type": "request",
+    "requestId": "71904.247",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9786.053226
+  },
+  {
+    "type": "request",
+    "requestId": "71904.248",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d/cotas?p=0&limit=5",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9786.054075
+  },
+  {
+    "type": "request",
+    "requestId": "71904.249",
+    "method": "GET",
+    "url": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%239899ac'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e",
+    "headers": {
+      "Referer": "",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+    },
+    "postData": null,
+    "timestamp": 9786.061299
+  },
+  {
+    "type": "response",
+    "requestId": "71904.242",
+    "url": "https://hub.qoredtvm.com.br/api/v1/users/me",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:41:14 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9786.165134
+  },
+  {
+    "type": "response",
+    "requestId": "71904.246",
+    "url": "https://hub.qoredtvm.com.br/api/v1/notifications",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:41:14 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9786.185134
+  },
+  {
+    "type": "response",
+    "requestId": "71904.247",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:41:14 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9786.196572
+  },
+  {
+    "type": "response",
+    "requestId": "71904.248",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d/cotas?p=0&limit=5",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:41:14 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9786.198947
+  },
+  {
+    "type": "request",
+    "requestId": "71904.250",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d/arquivos/carteira-pdf",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9788.773487
+  },
+  {
+    "type": "request",
+    "requestId": "71904.251",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d/arquivos?tipo=CARTEIRA_PDF&p=0",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d/arquivos/carteira-pdf",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9788.774338
+  },
+  {
+    "type": "request",
+    "requestId": "71904.252",
+    "method": "GET",
+    "url": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%235E6278'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e",
+    "headers": {
+      "Referer": "",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+    },
+    "postData": null,
+    "timestamp": 9788.7759
+  },
+  {
+    "type": "request",
+    "requestId": "71904.253",
+    "method": "GET",
+    "url": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%235E6278'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e",
+    "headers": {
+      "Referer": "",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+    },
+    "postData": null,
+    "timestamp": 9788.77609
+  },
+  {
+    "type": "response",
+    "requestId": "71904.250",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:41:17 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9788.911415
+  },
+  {
+    "type": "response",
+    "requestId": "71904.251",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/b44b10c0-a6d2-436c-9efb-7175ecaef88d/arquivos?tipo=CARTEIRA_PDF&p=0",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:41:17 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9788.912413
+  },
+  {
+    "type": "request",
+    "requestId": "71904.254",
+    "method": "GET",
+    "url": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e",
+    "headers": {
+      "Referer": "",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+    },
+    "postData": null,
+    "timestamp": 9806.249579
+  },
+  {
+    "type": "request",
+    "requestId": "71904.255",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "headers": {
+      "Referer": ""
+    },
+    "postData": null,
+    "timestamp": 9806.249808
+  },
+  {
+    "type": "request",
+    "requestId": "73BF01F5EADBDB4DD233868B4359A123",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0",
+    "headers": {
+      "Upgrade-Insecure-Requests": "1",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9807.441969
+  },
+  {
+    "type": "response",
+    "requestId": "73BF01F5EADBDB4DD233868B4359A123",
+    "url": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0",
+    "status": 200,
+    "mimeType": "text/html",
+    "headers": {
+      "accept-ranges": "bytes",
+      "content-length": "17888",
+      "content-type": "text/html",
+      "date": "Mon, 29 Dec 2025 20:41:36 GMT",
+      "etag": "\"694a9c95-45e0\"",
+      "last-modified": "Tue, 23 Dec 2025 13:43:49 GMT",
+      "server": "nginx/1.28.0"
+    },
+    "timestamp": 9807.565346
+  },
+  {
+    "type": "request",
+    "requestId": "71904.328",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/users/me",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9807.685756
+  },
+  {
+    "type": "request",
+    "requestId": "71904.332",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/notifications",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9807.705965
+  },
+  {
+    "type": "request",
+    "requestId": "71904.333",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9807.708415
+  },
+  {
+    "type": "request",
+    "requestId": "71904.334",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0/cotas?p=0&limit=5",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9807.70933
+  },
+  {
+    "type": "request",
+    "requestId": "71904.335",
+    "method": "GET",
+    "url": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%239899ac'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e",
+    "headers": {
+      "Referer": "",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+    },
+    "postData": null,
+    "timestamp": 9807.721513
+  },
+  {
+    "type": "response",
+    "requestId": "71904.328",
+    "url": "https://hub.qoredtvm.com.br/api/v1/users/me",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:41:36 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9807.817036
+  },
+  {
+    "type": "response",
+    "requestId": "71904.332",
+    "url": "https://hub.qoredtvm.com.br/api/v1/notifications",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:41:36 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9807.835029
+  },
+  {
+    "type": "response",
+    "requestId": "71904.333",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:41:36 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9807.836708
+  },
+  {
+    "type": "response",
+    "requestId": "71904.334",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0/cotas?p=0&limit=5",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:41:36 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9807.840725
+  },
+  {
+    "type": "request",
+    "requestId": "71904.336",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0/arquivos/carteira-pdf",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9809.515434
+  },
+  {
+    "type": "request",
+    "requestId": "71904.337",
+    "method": "GET",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0/arquivos?tipo=CARTEIRA_PDF&p=0",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJleHAiOjE3NjcwNDI2NDksImd1aWQiOiJkMWZjZTRkZS05N2E4LTRlZDAtYTIyOS05ZGMzZWI2ZTUxYmEiLCJwYXBlaXMiOlsiVVNFUiIsIkdFU1RPUl9SRUFEIiwiR0VTVE9SIiwiR0VTVE9SX0FETUlOIiwiR0VTVE9SX0VESVQiLCJDTElFTlRFIiwiQ0xJRU5URV9PUEVSQURPUiIsIkNBREFTVFJPX1ZBTElETyJdLCJwZXJtaXNzb2VzIjpbXX0.WHyfnP-AR7ExBKD-oHeX2QHbc4m9gT471kJ-elcj5WAkh9xLKlaV-iwmIo7D5INF62PJyJ80amN7LVYinfnznQ",
+      "Referer": "https://hub.qoredtvm.com.br/portfolios/fundo-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0/arquivos/carteira-pdf",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    "postData": null,
+    "timestamp": 9809.516705
+  },
+  {
+    "type": "request",
+    "requestId": "71904.338",
+    "method": "GET",
+    "url": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%235E6278'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e",
+    "headers": {
+      "Referer": "",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+    },
+    "postData": null,
+    "timestamp": 9809.518618
+  },
+  {
+    "type": "request",
+    "requestId": "71904.339",
+    "method": "GET",
+    "url": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%235E6278'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e",
+    "headers": {
+      "Referer": "",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+    },
+    "postData": null,
+    "timestamp": 9809.518812
+  },
+  {
+    "type": "response",
+    "requestId": "71904.336",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:41:38 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9809.646045
+  },
+  {
+    "type": "response",
+    "requestId": "71904.337",
+    "url": "https://hub.qoredtvm.com.br/api/v1/fundos-posicao/12fae1e2-dabb-4f11-85f5-91e951ada7a0/arquivos?tipo=CARTEIRA_PDF&p=0",
+    "status": 200,
+    "mimeType": "application/json",
+    "headers": {
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "content-type": "application/json",
+      "date": "Mon, 29 Dec 2025 20:41:38 GMT",
+      "expires": "0",
+      "pragma": "no-cache",
+      "server": "nginx/1.28.0",
+      "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "0"
+    },
+    "timestamp": 9809.647569
+  },
+  {
+    "type": "request",
+    "requestId": "71904.340",
+    "method": "GET",
+    "url": "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e",
+    "headers": {
+      "Referer": "",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+    },
+    "postData": null,
+    "timestamp": 9826.717076
+  },
+  {
+    "type": "request",
+    "requestId": "71904.341",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "headers": {
+      "Referer": ""
+    },
+    "postData": null,
+    "timestamp": 9826.717416
+  }
+]

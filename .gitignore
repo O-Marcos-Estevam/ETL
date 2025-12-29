@@ -1,17 +1,39 @@
+# Python
 __pycache__/
 *.pyc
+*.pyo
 *.spec
+.env
+.venv/
+venv/
+
+# Build
 build/
 dist/
+
+# Logs e outputs
 *.log
-*.txt
-*.pdf
+debug/*.txt
+
+# Dados (nao versionar arquivos grandes)
+*.accdb
 *.xlsx
 *.xls
 *.xml
-*.accdb
-inspect_*.py
-temp_*.py
-debug_*.py
-dump_*.py
-list_*.py
+*.pdf
+*.csv
+
+# Arquivos temporarios
+nan/
+nul
+temp_*
+trace_output.txt
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
